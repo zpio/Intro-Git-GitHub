@@ -217,9 +217,13 @@ git push -u origin main
 ```
 ![](imagenes/18.png)
 
-Al ejecutar `git push -u origin main` nos pedira hacer login en GitHub.
+Al ejecutar `git push -u origin main` nos pedirá hacer login en GitHub.
 
 ![](imagenes/19.png)
+
+Una vez hecho login en GitHub ya se subirá el repositorio a GitHub.
+
+![](imagenes/20.png)
 
 **Nota:**
 
