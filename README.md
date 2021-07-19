@@ -223,7 +223,7 @@ Al ejecutar `git push -u origin main` nos pedirá hacer login en GitHub.
 
 Una vez hecho login en GitHub ya se subirá el repositorio a GitHub.
 
-![](imagenes/20_1.png)
+![](imagenes/20_1.PNG)
 
 **Nota:**
 
