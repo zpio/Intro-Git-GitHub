@@ -254,6 +254,11 @@ Y para subir a GitHub solo ejecutar:
 git push
 ```
 
+Referencia
+==================================
+https://github.com/git-guides/
+
+https://git-scm.com/book/es/v2
 
 
 
