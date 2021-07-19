@@ -65,7 +65,7 @@ Debe mantener abierto el cmd.
 
 ![](imagenes/2.png)
 
-Se arbirá la clásica ventana negra, indicando que esta lista para escribir comando. 
+Se abrirá la clásica ventana negra, indicando que esta lista para escribir comandos. 
 
 ![](imagenes/4_1.png)
 
@@ -152,7 +152,7 @@ Si ya no vamos a seguir trabajando en el proyecto en este dia, podemos cerrar la
 Para futuras modificaciones
 --------------------------------------------
 
-Si en los dias posteriores hacemos nuevos cambios en nuestros archivos, agregamos nuevos archivos, creamos nuevas carpetas y la queremos subir al repositorio de Git para tener versionamiento, hay que seguir los mismo pasos con excepcion que ya no usaremos el comando `git init` porque el repositorio ya esta creado, ni tampoco tenemos que poner nuestro correo y nombre porque ya no los pedirán. Los pasos serian:
+Si en los dias posteriores hacemos nuevos cambios en nuestros archivos, agregamos nuevos archivos, creamos nuevas carpetas y para guardar los cambios en nuestro repositorio de Git, hay que seguir los mismo pasos con excepcion que ya no usaremos el comando `git init` porque el repositorio ya esta creado, ni tampoco tenemos que poner nuestro correo y nombre porque ya no los pedirán. Los pasos serian:
 
 ```
 git status
@@ -170,8 +170,9 @@ El comando `git log` da lista de los commits hechos sobre ese repositorio en ord
 
 ![](imagenes/14.png)
 
+----------------------------------------
 
-Que es GitHub
+Que es GitHub?
 ----------------------------------------
 
 GitHub es un sitio web para alojar proyectos utilizando el sistema de control de versiones Git.
@@ -184,10 +185,10 @@ Primero hay que crearse una cuenta como cualquier red social.
 
 ![](imagenes/logingithub.png)
 
-Publicar el repositorio Git a la plataforma web GitHub
+Publicar un repositorio Git en GitHub
 --------------------------------------------------------
 
-Si es la primera vez que va ejecutar GitHub debe seguir los siguientes pasos:
+Para publicar un repositorio en GitHub debe seguir los siguientes pasos:
 
 **Primero: crear un repositorio en GitHub**
 
@@ -197,24 +198,29 @@ Agregamos un nombre al repositorio, no necesariamente debe tener el mismo nombre
 
 ![](imagenes/16.png)
 
-Preferiblemente no darle check a la seccion de Add a README file porque despues no saldra la siguiente nota informativa:
+Preferiblemente no darle check a la seccion de **Add a README file** para que salga la siguiente guia:
 
 ![](imagenes/17.png)
 
 
-**Segundo: Ejecutar los siguientes comandos en el cmd**
+**Segundo: Subir el repositorio Git a GitHub**
 
 Debemos ejecutar los comandos que estan en el rectangulo azul en el cmd para poder subir nuestro repositorio Git a GitHub:
 
 ```
 git remote add origin https://github.com/zpio/mapa_ecuador_prueba.git
 ```
+El comando `git remote` solo debe ejecutarse solo una vez para subir el repositorio a GitHub. Para futuras modificaciones en el repositorio y subirlo a GitHub ya no se debe ejecutar `git remote`.
+
 ```
 git branch -M main
 ```
+El comando `git branch -M main` debe ejecutarse debido a un cambio en la plataforma de GitHub, donde hay que crear una rama llamada `main`.
 ```
 git push -u origin main
 ```
+El comando `git push` publica los cambios de nuestro repositorio a GitHub.
+
 ![](imagenes/18.png)
 
 Al ejecutar `git push -u origin main` nos pedirá hacer login en GitHub.
@@ -230,9 +236,23 @@ Una vez hecho login en GitHub ya se subirá el repositorio a GitHub.
 Los repositorios nuevos que se creen empezarán a mostrar **main** como rama principal y tendrán que hacer sus comandos respectivos allí. Antes había que apuntar a la rama **Master**. También se agrega un paso adicional, al momento de crear un repositorio desde la línea de comandos. Sabemos que **git branch** nos ayuda a crear una nueva rama dentro de nuestro repositorio y **-M** nos ayudará a mover todo el historial que tengamos (en caso de que los haya) en **master** a la nueva rama que estamos creando que se llama **main**.
 
 
+Para futuras modificaciones
+--------------------------------------------
+Si en los dias posteriores hacemos nuevos commits del repositorio Git, para subirlo a GitHub ya no debe ejecutarse ni `git remote` ni `git branch -M main` solo debe ejecutarse `git push`. En resumen seria asi:
 
-
-
+```
+git status
+```
+```
+git add .
+```
+```
+git commit -m 'mensaje del commit'
+```
+Y para subir a GitHub solo ejecutar:
+```
+git push
+```
 
 
 
