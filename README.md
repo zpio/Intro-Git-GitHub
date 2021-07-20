@@ -254,11 +254,48 @@ Y para subir a GitHub solo ejecutar:
 git push
 ```
 
+Clonar un repositorio de GitHub
+------------------------------------------
+
+Si deseas tener en un ordenador todo un repositorio de un proyecto de GitHub y trabajar sobre el, puedes usar el comando `git clone` seguido de una url del respositorio de GitHub.
+
+Al clonar un repositorio se te crea una carpeta en tu ordenador con todos los archivos que tenga dicho repositorio. 
+
+Primero debes decidi en que parte de tu ordenador quieres poner el repositorio a clonar y debes abrir el cmd:
+
+![](imagenes/2.png)
+
+Segundo debemos ir al sitio web del repositorio de GitHub:
+
+https://github.com/zpio/mapa-ecuador
+
+En la seccion de `code` esta la URL que necesitas para clonar el repositorio:
+
+https://github.com/zpio/mapa-ecuador.git
+
+![](imagenes/21.png)
+
+En el cmd debes escribir `git clone` seguido de la url:
+
+```
+git clone https://github.com/zpio/mapa-ecuador.git
+```
+
+![](imagenes/22.png)
+
+En tu carpeta aparecerá la carpeta de todo el repositorio.
+
+-------------------------------------------------------------
+
 Referencia
 ==================================
 https://github.com/git-guides/
 
 https://git-scm.com/book/es/v2
+
+https://www.youtube.com/watch?v=HiXLkL42tMU
+
+
 
 
 
