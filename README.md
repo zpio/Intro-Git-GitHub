@@ -24,9 +24,7 @@
 
 Git es un software de **control de versiones** distribuido. El control de versiones es una forma de guardar cambios a lo largo del tiempo sin sobrescribir versiones anteriores.
 
-Estar distribuido significa que cada desarrollador que trabaja con un **repositorio** de Git tiene una copia de ese repositorio completo: cada confirmación, cada rama, cada archivo.
-
-El control de versiones es muy importante; sin él, corre el riesgo de perder su trabajo. Con Git, puede hacer una "confirmación (**commit**)", o punto de guardado, con la frecuencia que desee. También puede volver a las confirmaciones (commits) anteriores.
+Git sólo necesitan archivos y recursos de tu ordenador para funcionar. Si quieres ver los cambios introducidos en un archivo entre la versión actual y la de hace un mes, Git puede buscar el archivo de hace un mes localmente.
 
 
 🔥 Descargar e Instalar Git <a name="instalar-git"></a>
@@ -42,7 +40,7 @@ https://git-scm.com/downloads
 
 ![](imagenes/estructura.png)
 
-Crear un **repositorio** de un proyecto en Git tiene tres areas principales: el directorio de trabajo (**Working Directory**), el área de preparación (**Staging Area**), el directorio de Git (**Git directory**).
+Git tiene tres areas principales: el directorio de trabajo (**Working Directory**), el área de preparación (**Staging Area**), el directorio de Git (**Git directory**).
 
 El **flujo de trabajo** básico en Git es algo así:
 
@@ -62,11 +60,11 @@ Y si ha sufrido cambios desde que se obtuvo del repositorio, pero no se ha prepa
 🔥 Directorio de trabajo (working directory) <a name="directorio"></a>
 -----------------------------------------------
 
-Un Directorio de trabajo es una **carpeta** en el ordenador con nuestros **archivos** de trabajo que ya venimos trabajando. O una **carpeta vacía** donde vamos empezar el proyecto desde cero. Por Ejemplo:
+Cuando se inicia un proyecto con git en una **carpeta** del proyecto de tu ordenador con los **archivos** de trabajo o una carpeta vacia, se convierte en un **Directorio de trabajo**. 
 
 ![](imagenes/1.png)
 
-Supongamos que ya hemos venido trabajando en un proyecto y tenemos varios archivos en esa carpeta. Por ejemplo:
+Cuando inciemos con Git en esta carpeta de trabajo se convertirá en un **Working directory"** y hará seguimiento a los cambios que vayamos haciendo.
 
 ![](imagenes/3.png)
 
@@ -74,7 +72,7 @@ Supongamos que ya hemos venido trabajando en un proyecto y tenemos varios archiv
 🔥 Abrir el Intérprete de Comandos cmd <a name="cmd"></a>
 -----------------------------------------------
 
-Para empezar a controlar y dar seguimiento a nuestros proyectos debe abrir el **intérprete de comandos cmd** desde la carpeta de trabajo para poder iniciar Git.
+Para empezar a dar seguimiento a nuestros proyectos debe abrir el **intérprete de comandos cmd** desde la carpeta de trabajo para poder iniciar Git. (Escriba cmd en la barra y enter para abrir el cmd)
 
 ![](imagenes/2.png)
 
