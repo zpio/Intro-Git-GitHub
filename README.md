@@ -26,7 +26,7 @@ Git es un software de **control de versiones** distribuido. El control de versio
 
 Estar distribuido significa que cada desarrollador que trabaja con un **repositorio** de Git tiene una copia de ese repositorio completo: cada confirmación, cada rama, cada archivo.
 
-El control de versiones es muy importante; sin él, corre el riesgo de perder su trabajo. Con Git, puede hacer una "confirmación (**commit**)", o punto de guardado, con la frecuencia que desee. También puede volver a las confirmaciones (commits) anteriores. Esto le quita la presión mientras trabaja.
+El control de versiones es muy importante; sin él, corre el riesgo de perder su trabajo. Con Git, puede hacer una "confirmación (**commit**)", o punto de guardado, con la frecuencia que desee. También puede volver a las confirmaciones (commits) anteriores.
 
 
 🔥 Descargar e Instalar Git <a name="instalar-git"></a>
@@ -42,7 +42,7 @@ https://git-scm.com/downloads
 
 ![](imagenes/estructura.png)
 
-Crear un **proyecto** en Git tiene tres areas principales: el directorio de trabajo (**Working Directory**), el área de preparación (**Staging Area**), el directorio de Git (**Git directory**).
+Crear un **repositorio** de un proyecto en Git tiene tres areas principales: el directorio de trabajo (**Working Directory**), el área de preparación (**Staging Area**), el directorio de Git (**Git directory**).
 
 El **flujo de trabajo** básico en Git es algo así:
 
@@ -74,7 +74,7 @@ Supongamos que ya hemos venido trabajando en un proyecto y tenemos varios archiv
 🔥 Abrir el Intérprete de Comandos cmd <a name="cmd"></a>
 -----------------------------------------------
 
-Para empezar a controlar y dar seguimiento a nuestros proyectos y archivos debe abrir el **intérprete de comandos cmd** desde la carpeta de trabajo para poder iniciar Git.
+Para empezar a controlar y dar seguimiento a nuestros proyectos debe abrir el **intérprete de comandos cmd** desde la carpeta de trabajo para poder iniciar Git.
 
 ![](imagenes/2.png)
 
@@ -114,7 +114,7 @@ git status
 
 ![](imagenes/6.png)
 
-![](imagenes/7.png)
+**Nota:** Cuando se crea un repositorio en Git se crea una especie de "linea en el tiempo" llamada "**branch**" (rama). Esta rama va almacenando todo el historial. En la imagen se indica que la rama se llama **MASTER** que viene ser la rama principal.
 
 
 🔥 Agregar archivos o cambios al repositorio con `git add` <a name="git-add"></a>
@@ -125,6 +125,8 @@ El comando `git add` **agrega** archivos **nuevos** o **modificados** de su dire
 Puedes agregar todos archivos o cambios de un solo golpe o uno por uno. Con `git add .` (punto) agrega todos los archivos nuevos y las modificaciones de golpe. Con `git add nombre del archivo` (ej. git add licencia.txt) agregas de forma individual.
 
 ![](imagenes/8.png)
+
+Si ejecutamos `git status` nuevamente veremos que los archivos ahora estan en color **verde** indicando que ya estan en **Staging Area** listo para la confirmación (commit).
 
 
 🔥 Crear un commit del repositorio con `git commit` <a name="git-commit"></a>
@@ -142,26 +144,36 @@ Para esto debes escribir los siguientes comandos en el cmd:
 
 Primero:
 ```
-git config –global user.email “zpio@hotmail.com”
+git config –global user.email "zpio@hotmail.com"
 ```
 ![](imagenes/11.png)
 
 Luego:
 ```
-git config –global user.name “zpio”
+git config –global user.name "zpio"
 ```
 ![](imagenes/12.png)
 
 
-Nuevamente tendremos que ejecutar `git commit` pero ahora le agregaremos un mensaje descriptivo con `git commit -m “descripción del mensaje”`
+Nuevamente tendremos que ejecutar `git commit` pero ahora le agregaremos un mensaje descriptivo con `git commit -m "descripción del mensaje"`
 ```
-git commit -m “inicio del proyecto”
+git commit -m "primer commit"
 ```
 ![](imagenes/13.png)
 
-Mostrará el mensaje de los cambios que hayamos hecho en nuestros archivos.
+Mostrará el mensaje con la confirmación de los cambios que hayamos hecho en nuestros archivos.
 
-🔥 Para futuras modificaciones
+🔥 Ver historial de commits con `git log` <a name="git-log"></a>
+--------------------------------------------
+El comando `git log` da lista de los commits hechos sobre ese repositorio en orden cronológico inverso, las más recientes se muestran al principio, esta muestra un Identificador del commit, Autor, Fecha de realización, Mensaje enviado.
+
+Tambien podemos usar `git log --oneline`
+
+![](imagenes/14.png)
+
+![](imagenes/14_1.png)
+
+🔥 Modificando el repositorio
 --------------------------------------------
 
 Si en los dias posteriores hacemos nuevos cambios en nuestros archivos o agregamos nuevos archivos o creamos nuevas carpetas, para guardar los cambios en nuestro repositorio de Git hay que seguir los mismo pasos con excepcion que ya no usaremos el comando `git init` porque el repositorio ya esta creado, ni tampoco tenemos que poner nuestro correo y nombre porque ya no los pedirán. 
@@ -175,16 +187,24 @@ git status
 git add .
 ```
 ```
+git status
+```
+```
 git commit -m 'mensaje del commit'
 ```
+```
+git log
+```
 
-🔥 Ver historial de commits con `git log` <a name="git-log"></a>
---------------------------------------------
-El comando `git log` da lista de los commits hechos sobre ese repositorio en orden cronológico inverso, las más recientes se muestran al principio, esta muestra un Identificador del commit, Autor, Fecha de realización, Mensaje enviado.
+A continuacion presento un ejemplo donde hemos agregado dos archivos mas a nuestro carpeta local y veremos que Git nos indicara que debemos agregar estos nuevos archivos al repositorio de Git.
 
-Tambien podemos usar `git log --oneline`
+![](imagenes/14_2.png)
 
-![](imagenes/14.png)
+![](imagenes/14_3.png)
+
+![](imagenes/14_4.png)
+
+![](imagenes/14_5.png)
 
 ----------------------------------------
 
