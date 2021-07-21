@@ -76,8 +76,6 @@ Supongamos que ya hemos venido trabajando en un proyecto y tenemos varios archiv
 
 Para empezar a controlar y dar seguimiento a nuestros proyectos y archivos debe abrir el **intérprete de comandos cmd** desde la carpeta de trabajo para poder iniciar Git.
 
-Debe mantener abierto el cmd.
-
 ![](imagenes/2.png)
 
 Se abrirá la clásica ventana negra, indicando que esta lista para escribir comandos. 
@@ -162,8 +160,6 @@ git commit -m “inicio del proyecto”
 ![](imagenes/13.png)
 
 Mostrará el mensaje de los cambios que hayamos hecho en nuestros archivos.
-
-Si ya no vamos a seguir trabajando en el proyecto en este dia, podemos cerrar la consola.
 
 🔥 Para futuras modificaciones
 --------------------------------------------
