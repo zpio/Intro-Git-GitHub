@@ -6,7 +6,7 @@
 - [Las áreas principales de Git](#areas-git)
 - [Directorio de trabajo (working directory)](#directorio)
 - [Abrir el Intérprete de Comandos cmd](#cmd)
-- [Crear un nuevo REPOSITORIO con `git init`](#git-init)
+- [Inicializando un repositorio con `git init`](#git-init)
 - [Inspección del repositorio con `git status`](#git-status)
 - [Agregar archivos o cambios al repositorio con `git add`](#git-add)
 - [Crear un commit del repositorio con `git commit`](#git-commit)
@@ -82,10 +82,11 @@ Se abrirá la clásica ventana negra, indicando que esta lista para escribir com
 
 La ventana del **cmd** nos indicará la ruta del directorio de trabajo seguido de un guión (\_) parpadeante, indicándonos que esta listo para que escribamos comandos.
 
+El siguiente paso en ejecutar es `git init`
 
-🔥 Crear un nuevo REPOSITORIO con `git init` <a name="git-init"></a>
+🔥 Inicializando un repositorio con `git init` <a name="git-init"></a>
 -----------------------------------------------
-El comando `git init` crea un **nuevo repositorio** de Git. Puede utilizarse para convertir un proyecto existente y sin versión en un repositorio de Git, o para inicializar un nuevo repositorio vacío. 
+El comando `git init` crea un **nuevo repositorio** de Git. Puede utilizarse para convertir un proyecto existente y sin versión de tu ordenador en un repositorio de Git.
 
 ```
 git init
@@ -94,7 +95,7 @@ git init
 
 Al escribir `git init` internamente se crea dos areas: **Staging Area (área de preparación)** y **.git directory (o Repositorio Local)**.
 
-Esto lo podemos verificar por que en la carpeta de nuestro ordenador donde tenemos el proyecto se agrega una carptea oculta .git.
+Esto lo podemos verificar por que en la carpeta de nuestro ordenador donde tenemos el proyecto se agrega una carpeta oculta .git.
 
 ![](imagenes/4.png)
 
@@ -112,7 +113,8 @@ git status
 
 ![](imagenes/6.png)
 
-**Nota:** Cuando se crea un repositorio en Git se crea una especie de "linea en el tiempo" llamada "**branch**" (rama). Esta rama va almacenando todo el historial. En la imagen se indica que la rama se llama **MASTER** que viene ser la rama principal.
+
+> **Nota:** Cuando se crea un repositorio en Git se crea una especie de "linea en el tiempo" llamada "**branch**" (rama). Esta rama va almacenando todo el historial. En la imagen se indica que la rama se llama **MASTER** que viene ser la rama principal.
 
 
 🔥 Agregar archivos o cambios al repositorio con `git add` <a name="git-add"></a>
@@ -124,7 +126,9 @@ Puedes agregar todos archivos o cambios de un solo golpe o uno por uno. Con `git
 
 ![](imagenes/8.png)
 
-Si ejecutamos `git status` nuevamente veremos que los archivos ahora estan en color **verde** indicando que ya estan en **Staging Area** listo para la confirmación (commit).
+Si ejecutamos `git status` nuevamente veremos que los archivos ahora estan en color **verde** indicando que ya estan en **Staging Area** listo para la confirmación (commit). Además indica que son "**new file**" nuevos archivos. Si en este punto modificamos estos archivos y aplicamos nuevamente `git status` mostrará el estado: **modified**.
+
+![](imagenes/8_1.png)
 
 
 🔥 Crear un commit del repositorio con `git commit` <a name="git-commit"></a>
