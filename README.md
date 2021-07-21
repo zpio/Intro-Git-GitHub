@@ -173,7 +173,7 @@ Tambien podemos usar `git log --oneline`
 
 ![](imagenes/14_1.png)
 
-🔥 Modificando el repositorio
+🔥 Modificando el repositorio local
 --------------------------------------------
 
 Si en los dias posteriores hacemos nuevos cambios en nuestros archivos o agregamos nuevos archivos o creamos nuevas carpetas, para guardar los cambios en nuestro repositorio de Git hay que seguir los mismo pasos con excepcion que ya no usaremos el comando `git init` porque el repositorio ya esta creado, ni tampoco tenemos que poner nuestro correo y nombre porque ya no los pedirán. 
