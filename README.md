@@ -164,7 +164,9 @@ Mostrará el mensaje de los cambios que hayamos hecho en nuestros archivos.
 🔥 Para futuras modificaciones
 --------------------------------------------
 
-Si en los dias posteriores hacemos nuevos cambios en nuestros archivos, agregamos nuevos archivos, creamos nuevas carpetas y para guardar los cambios en nuestro repositorio de Git, hay que seguir los mismo pasos con excepcion que ya no usaremos el comando `git init` porque el repositorio ya esta creado, ni tampoco tenemos que poner nuestro correo y nombre porque ya no los pedirán. Los pasos serian:
+Si en los dias posteriores hacemos nuevos cambios en nuestros archivos o agregamos nuevos archivos o creamos nuevas carpetas, para guardar los cambios en nuestro repositorio de Git hay que seguir los mismo pasos con excepcion que ya no usaremos el comando `git init` porque el repositorio ya esta creado, ni tampoco tenemos que poner nuestro correo y nombre porque ya no los pedirán. 
+
+Los pasos serian:
 
 ```
 git status
@@ -179,6 +181,8 @@ git commit -m 'mensaje del commit'
 🔥 Ver historial de commits con `git log` <a name="git-log"></a>
 --------------------------------------------
 El comando `git log` da lista de los commits hechos sobre ese repositorio en orden cronológico inverso, las más recientes se muestran al principio, esta muestra un Identificador del commit, Autor, Fecha de realización, Mensaje enviado.
+
+Tambien podemos usar `git log --oneline`
 
 ![](imagenes/14.png)
 
