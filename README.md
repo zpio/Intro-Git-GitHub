@@ -323,7 +323,7 @@ Si deseas tener en un ordenador todo un repositorio de un proyecto de GitHub y t
 
 Al clonar un repositorio se te crea una carpeta en tu ordenador con todos los archivos que tenga dicho repositorio. 
 
-Primero debes decidi en que parte de tu ordenador quieres poner el repositorio a clonar y debes abrir el cmd:
+Primero debes decidir en que parte de tu ordenador quieres poner el repositorio a clonar y debes abrir el cmd:
 
 ![](imagenes/2.png)
 
@@ -345,7 +345,7 @@ git clone https://github.com/zpio/mapa-ecuador.git
 
 ![](imagenes/22.png)
 
-En tu carpeta aparecerá la carpeta de todo el repositorio.
+En tu directorio de trabajo aparecerá la carpeta de todo el repositorio.
 
 -------------------------------------------------------------
 
