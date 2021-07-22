@@ -175,10 +175,10 @@ Tambien podemos usar `git log --oneline`
 
 ![](imagenes/14_1.png)
 
-🔥 Modificando el repositorio local
+🔥 Nuevos commits
 --------------------------------------------
 
-Si en los dias posteriores hacemos nuevos cambios en nuestros archivos o agregamos nuevos archivos o creamos nuevas carpetas, para guardar los cambios en nuestro repositorio de Git hay que seguir los mismo pasos con excepcion que ya no usaremos el comando `git init` porque el repositorio ya esta creado, ni tampoco tenemos que poner nuestro correo y nombre porque ya no los pedirán. 
+Si en dias posteriores hacemos nuevos cambios en nuestros archivos o agregamos nuevos archivos o creamos nuevas carpetas, para guardar los cambios en nuestro repositorio de Git hay que seguir los mismo pasos con excepcion que ya no usaremos el comando `git init` porque el repositorio ya esta creado, ni tampoco tenemos que poner nuestro correo y nombre porque ya no los pedirán. 
 
 Los pasos serian:
 
@@ -192,21 +192,40 @@ git add .
 git status
 ```
 ```
-git commit -m 'mensaje del commit'
+git commit -m 'segundo commit'
 ```
 ```
 git log
 ```
 
-A continuacion presento un ejemplo donde hemos agregado dos archivos mas a nuestro carpeta local y veremos que Git nos indicara que debemos agregar estos nuevos archivos al repositorio de Git.
+A continuacion presento un ejemplo donde hemos agregado dos archivos mas a nuestro carpeta local y veremos que Git nos indicará que debemos agregar estos nuevos archivos al repositorio de Git.
 
+```
+git status
+```
 ![](imagenes/14_2.png)
 
+```
+git add .
+```
 ![](imagenes/14_3.png)
+
+```
+git status
+```
 
 ![](imagenes/14_4.png)
 
+```
+git log --oneline
+```
+```
+git log
+```
+
 ![](imagenes/14_5.png)
+
+En cada confirmación de cambios (**commit**), Git almacena una instantánea de tu trabajo preparado.
 
 ----------------------------------------
 
@@ -246,35 +265,37 @@ Preferiblemente no darle check a la seccion de **Add a README file** para que sa
 
 **Segundo: Subir el repositorio Git a GitHub**
 
-Debemos ejecutar los comandos que estan en el rectangulo azul en el cmd para poder subir nuestro repositorio Git a GitHub:
+Debemos ejecutar los comandos que estan en el rectangulo azul en el cmd para poder subir nuestro repositorio Git a GitHub.
 
+El comando `git remote` solo debe ejecutarse solo una vez para subir el repositorio a GitHub. Para futuras modificaciones en el repositorio y subirlo a GitHub ya no se debe ejecutarse.
 ```
 git remote add origin https://github.com/zpio/mapa_ecuador_prueba.git
 ```
-El comando `git remote` solo debe ejecutarse solo una vez para subir el repositorio a GitHub. Para futuras modificaciones en el repositorio y subirlo a GitHub ya no se debe ejecutar `git remote`.
+
+**¿Te acuerdas que nuestra rama principal se llama MASTER?** Pues ahora la vamos a renombrar a "**main**" debido a un cambio en la plataforma de GitHub. Para logralo hay que usar el comando `git branch -M main` para forzar el cambio de nombre.
 
 ```
 git branch -M main
 ```
-El comando `git branch -M main` debe ejecutarse debido a un cambio en la plataforma de GitHub, donde hay que crear una rama llamada `main`.
+
+El comando `git push` publica los cambios de nuestro repositorio a GitHub. Si es la primera vez que subimos un repositorio a GitHub, al ejecutar `git push -u origin main` nos pedirá hacer login en GitHub.
 ```
 git push -u origin main
 ```
-El comando `git push` publica los cambios de nuestro repositorio a GitHub.
 
 ![](imagenes/18.png)
 
-Al ejecutar `git push -u origin main` nos pedirá hacer login en GitHub.
+Una vez hecho login en GitHub ya se subirá el repositorio a GitHub.
 
 ![](imagenes/19.png)
 
-Una vez hecho login en GitHub ya se subirá el repositorio a GitHub.
+Al actualizar la pagina de github aparecerá asi:
 
 ![](imagenes/20_1.PNG)
 
-**Nota:**
+> **Nota:**
 
-Los repositorios nuevos que se creen empezarán a mostrar **main** como rama principal y tendrán que hacer sus comandos respectivos allí. Antes había que apuntar a la rama **Master**. También se agrega un paso adicional, al momento de crear un repositorio desde la línea de comandos. Sabemos que **git branch** nos ayuda a crear una nueva rama dentro de nuestro repositorio y **-M** nos ayudará a mover todo el historial que tengamos (en caso de que los haya) en **master** a la nueva rama que estamos creando que se llama **main**.
+> Los repositorios nuevos que se creen en GitHub empezarán a mostrar **main** como rama principal y tendrán que hacer sus comandos respectivos allí. Antes había que apuntar a la rama **Master**. Sabemos que **git branch** nos ayuda a crear una nueva rama dentro de nuestro repositorio pero **-M** nos ayudará a mover todo el historial que tengamos en **master** a la nueva rama que estamos creando llamada **main**.
 
 
 🔥 Para futuras modificaciones
@@ -330,11 +351,11 @@ En tu carpeta aparecerá la carpeta de todo el repositorio.
 
 🔥 Referencia <a name="referencia"></a>
 ==================================
-https://github.com/git-guides/
 
-https://git-scm.com/book/es/v2
+Libro de Git: https://git-scm.com/book/es/v2
 
-https://www.youtube.com/watch?v=HiXLkL42tMU
+Documentacion de Git y GitHub https://github.com/git-guides/
+
 
 
 
